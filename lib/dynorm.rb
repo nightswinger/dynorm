@@ -9,5 +9,6 @@ module Dynorm
   autoload :Item, 'dynorm/item'
   autoload :ItemCollection, 'dynorm/item_collection'
   autoload :KeyExpression, 'dynorm/key_expression'
+  autoload :KeyCondition, 'dynorm/key_condition'
   autoload :Query, 'dynorm/query'
 end

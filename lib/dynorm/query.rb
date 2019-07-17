@@ -28,6 +28,17 @@ module Dynorm
       db.update_item(params)
     end
 
+    def query_v2(key, options = {})
+      conditions = KeyCondition.new key
+
+      params = default_params.merge(conditions.params)
+      params = params.merge(option_params(options)) if options.any?
+
+      puts params
+
+      db.query(params)
+    end
+
     def query(key, options = {})
       exp = KeyExpression.new(key)
 
